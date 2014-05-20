@@ -1,0 +1,42 @@
+#topBar {
+	background-color:#696969;
+	display:block;
+	width:100%;
+}
+
+body {
+	font-family:"Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+	background-color:#000000; /*Black*/
+	color:#FFFFFF; /*White*/
+}
+
+a, a:visited, a:hover {
+	text-decoration:none;
+	color:#ADADAD; /*Grey*/
+	font-weight:bold; 
+}
+
+#game {
+	height:85%;
+	width:65%;
+	position:static;
+	display:inline-block;
+}
+
+#commandLine {
+	width:95%;
+	height:35px;
+	font-family:"Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+	font-size:18px;
+	color:#FFFFFF; /*White*/
+	background-color:#000000; /*Black*/
+	border-bottom:1px solid #FFFFFF; /*White*/
+}
+
+#displayPicture {
+	background-color:#757575; /*Grey*/
+	height:50%;
+	width:15%;
+	display:inline-block;
+	text-align:center;
+}
