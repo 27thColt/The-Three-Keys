@@ -5,6 +5,7 @@ Room = function(name, text, picSrc) {
 	this.text = text;
 	this.exits = {NORTH:null, SOUTH:null, EAST:null, WEST:null};
 	this.items = [];
+	this.people = [];
 	this.picSrc = "<img src=\"" + picSrc + "\"></img>";
 };
 

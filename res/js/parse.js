@@ -4,8 +4,8 @@ parse = function(string) {
 	if (string.substr(0, 4) == "help") {
 		$("#game").empty();
 		$("#game").append("Commands: <br> -look [looks at the current area the player is in] <br> -go (north/east/south/west) [go to another area] <br> -examine (item) [looks at an item] <br> -get (item) [puts an item from your current area and puts it in you inventory for later use] <br> -inventory [give you a list of items in your inventory]");
-		$("#game").append("<br> -use (item) [use an item that is in your inventory]");
-		$("#game").append("<br> <br> type \"look\" to see your surroundings");
+		$("#game").append("<br> -use (item) [use an item that is in your inventory] <br> -talk (person's name) [talk to someone who is in the room]");
+		$("#game").append("<br> <br> type \"look\" to see your surroundings.");
 
 	//look command
 	} else if (string.substr(0, 4) == "look") {
@@ -71,6 +71,14 @@ parse = function(string) {
 		for (var i = 0; i < player.inventory.length; i++) {
 			if (string.substr(4, string.length - 4) == player.inventory[i].name && player.inventory[i].usable == true) {
 				player.inventory[i].useFunc();
+			};
+		};
+
+	//talk command
+	} else if (string.substr(0, 4) == "talk") {
+		for (var i = 0; i < player.room.people.length; i++) {
+			if (string.substr(5, string.length - 5) == player.room.people[i].name && player.room.people[i].talkable == true) {
+				player.room.people[i].talk();
 			};
 		};
 	} else {
